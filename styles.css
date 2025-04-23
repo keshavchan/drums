@@ -115,20 +115,35 @@ body {
 }
 
 /* Responsive design */
-@media (max-width: 400px) {
+@media (max-width: 560px) {
+    .main-container {
+        width: 100%;
+        gap: 24px;
+    }
+
     .drum-machine {
-        gap: 5px;
-        padding: 10px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        row-gap: 24px;
+        column-gap: 24px;
+        width: 100%;
+        max-width: 300px;
     }
     
     .drum-pad {
-        width: 28px;
-        height: 28px;
-        font-size: 16px;
+        width: 64px;
+        height: 64px;
+        font-size: 18px;
     }
 
     .drum-icon {
-        width: 20px;
-        height: 20px;
+        display: none;
+    }
+
+    .drum-pad-container {
+        gap: 24px;
+        width: fit-content;
+        margin: 0 auto;
     }
 } 
