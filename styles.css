@@ -121,6 +121,12 @@ body {
     filter: brightness(0.7);
 }
 
+/* Active state for mobile icons */
+.drum-pad-container.active .mobile-icon {
+    filter: brightness(0) invert(1); /* This will make the SVG white */
+    animation: spring 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
 .mobile-icon {
     display: none;
     width: 24px;
