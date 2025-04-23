@@ -1,0 +1,134 @@
+@font-face {
+    font-family: 'PPMondwest';
+    src: url('fonts/PPMondwest-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000000;
+    color: #FFFFFF;
+    font-family: 'PPMondwest', monospace;
+    font-weight: normal;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 120px;
+    height: 100vh;
+    width: 416px;
+}
+
+.intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    font-size: 24px;
+    color: #A1A1A1;
+}
+
+.drum-machine {
+    display: flex;
+    gap: 24px;
+    border-radius: 10px;
+}
+
+.drum-pad-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+}
+
+.drum-icon {
+    width: 24px;
+    height: 24px;
+    transition: all 0.1s ease;
+}
+
+.drum-pad-container:hover .drum-icon {
+    transform: scale(1.1);
+    filter: brightness(1.0);
+}
+
+.drum-pad {
+    width: 56px;
+    height: 56px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #101010;
+    color: #A1A1A1;
+    font-size: 21px;
+    cursor: pointer;
+    user-select: none;
+    transition: all 0.1s ease;
+    border: 1px solid #292929;
+}
+
+.drum-pad:hover {
+    background-color: #1F1F1F;
+    border: 1px solid #333333;
+    color: #CCCCCC;
+}
+
+@keyframes wiggle {
+    0% { transform: scale(1); }
+    50% { transform: scale(0.9); }
+    100% { transform: scale(1); }
+}
+
+@keyframes spring {
+    0% { transform: translateY(0); }
+    15% { transform: translateY(-3px); }
+    30% { transform: translateY(1px); }
+    45% { transform: translateY(-1px); }
+    60% { transform: translateY(0.5px); }
+    75% { transform: translateY(-0.5px); }
+    100% { transform: translateY(0); }
+}
+
+.drum-pad-container.active .drum-pad {
+    background-color: #fff;
+    color: #000;
+    animation: wiggle 0.3s ease;
+}
+
+.drum-pad-container.active .drum-icon {
+    animation: spring 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    filter: brightness(0.7);
+}
+
+/* Responsive design */
+@media (max-width: 400px) {
+    .drum-machine {
+        gap: 5px;
+        padding: 10px;
+    }
+    
+    .drum-pad {
+        width: 28px;
+        height: 28px;
+        font-size: 16px;
+    }
+
+    .drum-icon {
+        width: 20px;
+        height: 20px;
+    }
+} 
