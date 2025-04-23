@@ -143,8 +143,8 @@ body {
     padding: 24px 0;
     color: #828282;
     font-family: 'Atkinson Hyperlegible', sans-serif;
-    font-size: 13px;
-    letter-spacing: 0.06em;
+    font-size: 14px;
+    letter-spacing: 0.02em;
     z-index: 100;
 }
 
@@ -198,8 +198,8 @@ body {
     }
 
     .sticky-line {
-        font-size: 13px;
-        padding: 16px 0;
+        font-size: 14px;
+        padding: 20px 0;
         position: fixed;
         bottom: 0;
         left: 0;
