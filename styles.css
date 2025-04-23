@@ -13,6 +13,7 @@
 
 body {
     height: 100vh;
+    height: 100dvh; /* dynamic viewport height for mobile */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -20,6 +21,8 @@ body {
     color: #FFFFFF;
     font-family: 'Cedarville Cursive', cursive;
     font-weight: normal;
+    margin: 0;
+    overflow: hidden;
 }
 
 .main-container {
@@ -28,7 +31,7 @@ body {
     align-items: center;
     justify-content: center;
     gap: 120px;
-    height: 100vh;
+    height: 100%;
     width: 416px;
     padding: 20px;
 }
@@ -127,7 +130,7 @@ body {
         width: 100%;
         gap: 24px;
         padding: 0;
-        min-height: 100vh;
+        height: 100%;
         overflow: hidden;
     }
 
