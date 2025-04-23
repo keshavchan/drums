@@ -125,6 +125,7 @@ body {
     .main-container {
         width: 100%;
         gap: 24px;
+        height: 100vh;
     }
 
     .drum-machine {
