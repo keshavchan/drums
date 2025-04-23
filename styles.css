@@ -16,9 +16,9 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #000000;
+    background-color: #ECF4FF;
     color: #FFFFFF;
-    font-family: 'PPMondwest', monospace;
+    font-family: 'Cedarville Cursive', cursive;
     font-weight: normal;
 }
 
@@ -67,24 +67,23 @@ body {
 }
 
 .drum-pad {
-    width: 56px;
-    height: 56px;
+    width: 64px;
+    height: 64px;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #101010;
-    color: #A1A1A1;
-    font-size: 21px;
+    background-color: #E0EDFF;
+    color: #00347A;
+    font-size: 22px;
     cursor: pointer;
     user-select: none;
     transition: all 0.1s ease;
-    border: 1px solid #292929;
 }
 
 .drum-pad:hover {
-    background-color: #1F1F1F;
-    border: 1px solid #333333;
-    color: #CCCCCC;
+    background-color: #D6E7FF;
+    border: 1px solid #70ACFF;
+    color: #00347A;
 }
 
 @keyframes wiggle {
@@ -104,8 +103,8 @@ body {
 }
 
 .drum-pad-container.active .drum-pad {
-    background-color: #fff;
-    color: #000;
+    background-color: #000000;
+    color: #ffffff;
     animation: wiggle 0.3s ease;
 }
 
