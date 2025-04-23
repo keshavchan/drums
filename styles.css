@@ -5,6 +5,9 @@
     font-style: normal;
 }
 
+/* Import Atkinson Hyperlegible font */
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -124,6 +127,21 @@ body {
     height: 24px;
 }
 
+/* Sticky line at the bottom */
+.sticky-line {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    padding: 24px 0;
+    color: #828282;
+    font-family: 'Atkinson Hyperlegible', sans-serif;
+    font-size: 13px;
+    letter-spacing: 0.06em;
+    z-index: 100;
+}
+
 /* Responsive design */
 @media (max-width: 560px) {
     .main-container {
@@ -171,5 +189,10 @@ body {
         display: flex;
         justify-content: center;
         align-items: center;
+    }
+
+    .sticky-line {
+        font-size: 12px;
+        padding: 8px 0;
     }
 } 
